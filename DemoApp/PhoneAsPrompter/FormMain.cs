@@ -91,7 +91,10 @@ namespace PhoneAsPrompter
                             notesText = "";
                         }
                     }));
-                    await response.WriteAsync(notesText);
+                    if (notesText!=null)
+                    {
+                        await response.WriteAsync(notesText);
+                    }
                 }
                 else if (path == "/next")
                 {
